@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "@powershell if (Test-Path dist) { Remove-Item -Recurse -Force dist }; cd ..\\full-stack-open\\part2\\phonebook; npm run build; Copy-Item dist -Recurse ..\\..\\..\\full-stack-open-phonebook-backend\\dist",
+    "deploy:full": "npm run build:ui && git add . && git commit -m \"uibuild exercice 3.11\" && git push"
   },
   "author": "Mostafa Chiba",
   "license": "MIT",
