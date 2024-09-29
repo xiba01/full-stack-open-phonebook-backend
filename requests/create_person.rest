@@ -1,7 +1,7 @@
-POST http://localhost:3001/api/persons
+POST https://full-stack-open-phonebook-backend-vrqf.onrender.com/api/persons
 Content-Type: application/json
 
 {
-  "name": "Mostafa Chiba",
-  "number": "5512152"
+  "name": "Saad Chiba",
+  "number": "5512852"
 }
